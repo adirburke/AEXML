@@ -17,7 +17,7 @@ import FoundationXML
 */
 open class AEXMLElement {
 
-        open var namespaces : [String:String] = [:]
+    open var namespaces : [String:String] = [:]
     open var namespacesUri : [String:String] = [:]
     
     open var lastestNampace : String = ""
