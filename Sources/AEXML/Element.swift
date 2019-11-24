@@ -16,7 +16,11 @@ import FoundationXML
     return `<bar></bar>` element from `<element><foo><bar></bar></foo></element>` XML as an `AEXMLElement` object.
 */
 open class AEXMLElement {
+
+        open var namespaces : [String:String] = [:]
+    open var namespacesUri : [String:String] = [:]
     
+    open var lastestNampace : String = ""
     // MARK: - Properties
     
     /// Every `AEXMLElement` should have its parent element instead of `AEXMLDocument` which parent is `nil`.
