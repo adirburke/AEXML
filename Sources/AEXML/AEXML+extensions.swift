@@ -59,7 +59,7 @@ public extension AEXMLElement {
             }
             let name = ["xmlns:\(nameSpace)" : uri]
             self.attributes = self.attributes.merging(name){ (_, new) in new}
-    //        node = element.addChild(name: "\(nameSpace):\(nameSpaceName)", value: nil, attributes: name)
+    //        node = self.addChild(name: "\(nameSpace):\(nameSpaceName)", value: nil, attributes: name)
             node = self.addChild(name: "\(nameSpace):\(nameSpaceName)")
             old.addNameSpace(name: nameSpace, uri: uri)
             
