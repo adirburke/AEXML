@@ -186,6 +186,15 @@ open class AEXMLElement {
         return nil
     }
     
+    open func firstDescendantSingleGeneration(where predicate: (AEXMLElement) -> Bool) -> AEXMLElement? {
+        for child in children {
+            if predicate(child) {
+                return child
+            }
+        }
+        return nil
+    }
+    
     /**
         Indicates whether the element has a descendant satisfying the given predicate.
      
