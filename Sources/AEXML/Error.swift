@@ -19,4 +19,17 @@ public enum AEXMLError: Error {
     
     /// `AEXMLDocument` can throw this error on `init` or `loadXMLData` if parsing with `XMLParser` was not successful.
     case parsingFailed
+    
+    public var localizedDescription : String{
+        switch self {
+        case .elementNotFound:
+            return "elementNotFound"
+            
+        case .rootElementMissing:
+            return "rootElementMissing"
+            
+        case .parsingFailed:
+            return "parsingFailed"
+        }
+    }
 }
